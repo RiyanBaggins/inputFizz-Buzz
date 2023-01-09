@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Get a FizzBuzz Result!</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            h2, h4{
+                margin: 0;
+            }
+            p#demo {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Get a FizzBuzz Result!</h2>
+        <h4>input your number this bottom</h4>
+        <br >
+        <p>Bilangan  
+        <input type="number" id="inputNumber" name="inputNumber">
+        <button type="button" onclick="checkNumber()">Check</button>
+        <p id="result"></p>
+        <script>
+            function checkNumber() {
+                var input = document.getElementById("inputNumber").value;
+                var result = "";
+               if (input % 3 == 0){
+                result += "Fizz"
+                console.log(input);
+               } if ( input % 5 == 0){
+                result += "Buzz"
+                console.log(input);
+               } if (input %  3 === 5 ){
+                result += "FizzBuzz"
+                console.log(input);
+               } if (result == ""){
+                result = input;
+                console.log(input);
+                } if (input == 0 ){
+                result = "Invalid Number";
+                console.log(input);
+               }
+               document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
